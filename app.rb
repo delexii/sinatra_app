@@ -19,8 +19,12 @@ get '/random-cat' do
 end
 # server attempts to look for the image when we send the request
 
-get '/named-cat' do 
+post '/named-cat' do 
   p params
   @name = params[:name]
   erb(:index)
 end
+
+get '/named-form' do
+  erb(:named_cat)
+end 
